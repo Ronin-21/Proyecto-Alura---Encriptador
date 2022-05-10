@@ -34,8 +34,9 @@ function desencriptar(textoInput){
 }
 
 function copiar(){
-    const textoCopiado = mensajeEncriptado.value;
-    textoUsuario.value = textoCopiado;
+    mensajeEncriptado.select();
+    document.execCommand('copy');
+    textoUsuario.value = mensajeEncriptado.value;
 }
 
 function btnEncriptar(){
