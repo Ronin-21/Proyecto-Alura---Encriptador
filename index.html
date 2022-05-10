@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eb9fc79dc8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="img/Logo.png" alt="Logo">
+    </header>
+    <main class="contenedor">
+        <section class="sec1">
+            <textarea class="caja-txt_left" placeholder="Ingrese aquí su texto"></textarea>
+            <div class="botones">
+                <div class="leyenda">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <h6>Solo letras minúsculas y sin acentos</h6>
+                </div>
+                <button class="btn-encriptar">Encriptar</button>
+                <button class="btn-desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="sec2">
+            <img class="aside-img" src="img/Muñeco.png">
+            <p class="aside-msj">Ningún mensaje fue encontrado</p>
+            <textarea class="caja-txt_right" placeholder="Ingresa el texto que desees encriptar o desencriptar""></textarea>
+            <button class=" btn-copiar oculto">Copiar</button>
+        </section>
+    </main>
+
+    <footer>
+        <p class=" footer">RoninWebDesign || Abel Alejandro Acuña</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
