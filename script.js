@@ -37,16 +37,20 @@ function copiar(){
     mensajeEncriptado.select();
     document.execCommand('copy');
     textoUsuario.value = mensajeEncriptado.value;
+    alert("El mensaje fue copiado al portapapeles");
+    textoUsuario.focus();
 }
 
 function btnEncriptar(){
     const textoEncriptado = encriptar(textoUsuario.value);
     mensajeEncriptado.value = textoEncriptado;
+    textoUsuario.value = "";
 }
 
 function btnDesencriptar(){
     const textoDesencriptado = desencriptar(textoUsuario.value);
     mensajeEncriptado.value = textoDesencriptado;
+    textoUsuario.value = "";
 }
 
 function ocultar(){
