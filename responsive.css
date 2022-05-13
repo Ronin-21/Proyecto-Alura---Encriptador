@@ -1,0 +1,113 @@
+@media screen and (max-width: 768px){
+    .contenedor{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sec1{
+        width: 80%;
+    }
+
+    .caja-txt_left{
+        height: 50%;
+    }
+
+    .advertencia{
+        color: var(--letter-color);
+    }
+
+    .boton{
+        width: 270px;
+    }
+
+    .sec2{
+        width: 80%;
+        height: auto;
+        border-top: 1.5px solid var(--letter-color-st);
+    }
+
+    .agrandar{
+        position: relative;
+        width: 80%;
+        height: 150px;
+        top: 0;
+        text-align: center;
+    }
+
+    .btn-copiar{
+        position: relative;
+        bottom: 0;
+        width: 80%;
+    }
+
+    .aside-img{
+        display: none;
+    }
+
+    .footer{
+        height: 8%;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+    .footer>p,div{
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    
+    .logo{
+        left: 30px;
+        top: 20px;
+        transform: scale(0.8);
+    }
+
+    .sec1{
+        width: 100%;
+    }
+
+    .caja-txt_left{
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        font-size: 20px;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .caja-txt_right{
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .caja-txt_right::placeholder{
+        font-size: 15px;
+    }
+
+    .aside-msj{
+        font-size: 20px;
+    }
+
+    .btn-contenedor{
+        bottom: 20px;
+    }
+
+    .footer{
+        height: auto;
+        margin-top: 10px;
+        background-color: var(--pri-color);
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .redes{
+        display: flex;
+    }
+
+    .wave{
+        display: none;
+    }
+}
