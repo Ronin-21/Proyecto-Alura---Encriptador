@@ -1,208 +1,192 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --bg-color: #F3F5FC;
-    --pri-color: #0A3871;
-    --sec-color: #E5E5E5;
-    --letter-color: #495057;
-    --letter-color-st: #343A40;
-    --sombra: 0px 24px 32px -8px rgba(0, 0, 0, 0.29);
+:root {
+  --bg-color: #f3f5fc;
+  --pri-color: #0a3871;
+  --sec-color: #e5e5e5;
+  --letter-color: #495057;
+  --letter-color-st: #343a40;
+  --font: "Inter", sans-serif;
+  --sombra: 0px 24px 32px -8px rgba(0, 0, 0, 0.29);
 }
 
-html{
-    height: 100%;
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: var(--font);
+  font-size: 1.2rem;
+  background-color: var(--bg-color);
 }
 
-.contenedor{
-    width: 100%;
-    min-height: 100%;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    line-height: 1.4;
-    background-color: var(--bg-color);
-    overflow: hidden;
-    display: grid;
-    gap: 10px;
-    grid-template:
-    "header main" auto
-    "footer footer" 5% /
-    10%     auto;
+/*------COMPONENTS------*/
+.btn {
+  width: 90%;
+  max-width: 20rem;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid var(--sec-color);
+  color: var(--sec-color);
+  background-color: var(--pri-color);
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
 }
 
-.header{
-    grid-area: header;
+.btn-secondary {
+  background-color: var(--sec-color);
+  color: var(--pri-color);
+  border: 1px solid var(--pri-color);
 }
 
-.logo{
-    position: relative;
-    left: 40%;
-    top: 5%;
+.btn:hover {
+  transform: scale(1.1);
 }
 
-.main{
-    grid-area: main;
-    display: flex;
+.btn-secondary:hover {
+  transform: scale(1.1);
 }
 
-.boton{
-    width: 30%;
-    padding: 22px 0;
-    border-radius: 25px;
-    margin: 10px;
-    font-size: 1rem;
-    box-shadow: var(--sombra);
-    cursor: pointer;
+/*------BEGIN------*/
+.logo {
+  width: 2rem;
+  height: 3rem;
+  margin: 1rem;
 }
 
-.boton:hover{
-    transform: scale(1.1);
-    transition: all 0.3s ease-in;
-}
-
-textarea{
-    font-family: inherit;
-    border: none;
-    background-color: transparent;
-    resize: none;
-    outline: none;
+.main {
+  width: 90%;
+  max-width: 1600px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 /*  SECCION 1  */
-.seccion-left{
-    width: 70%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.section-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.caja-txt_left{
-    position: relative;
-    top: 15%;
-    width: 80%;
-    height: 50%;
-    font-size: 2rem;
-    color: var(--pri-color);
+.section-left__textarea {
+  width: 90%;
+  min-height: 80vw;
+  background-color: transparent;
+  font-size: 1.3rem;
+  color: var(--letter-color);
+  border: none;
+  outline: none;
 }
 
-.caja-txt_left::placeholder{
-    color: var(--pri-color);
+.section-left__textarea::placeholder {
+  color: var(--pri-color);
+  font-family: var(--font);
+  font-size: 1.4rem;
 }
 
-.btn-encriptar{
-    background-color: var(--pri-color);
-    color: var(--sec-color);
-    border: 2px solid var(--sec-color);
-    
+.warnning {
+  align-self: flex-start;
+  margin: 0.5rem 1rem;
+  color: var(--letter-color-st);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-.btn-desencriptar{
-    background-color: var(--sec-color);
-    color:var(--pri-color);
-    border: 2px solid var(--sec-color);
+.btn-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
-
-.advertencia{
-    display: flex;
-    align-items: baseline;
-    color: var(--sec-color);
-    margin: 15px 10px;
-}
-
-.advertencia>h6{
-    font-size: 12px;
-    margin-left: 10px;
-}
-
 /*  SECCION 2  */
-.seccion-right{
-    width: 30%;
-    height: 100%;
+.section-right {
+  width: 100%;
 }
 
-.sec2-container{
-    position: relative;
-    top: 5%;
-    left: 5%;
-    width: 80%;
-    height: 95%;
-    background-color: #FFFFFF;
-    box-shadow: var(--sombra);
-    border-radius: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.section-right__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--bg-color);
+  box-shadow: var(--sombra);
+  border-radius: 1rem;
+  padding-bottom: 1rem;
 }
 
-.aside-img{
-    width: 95%;
+.section-right__img {
+  width: 100%;
+  padding: 1rem;
 }
 
-.sec2-container>p{
-    width: 80%;
-    font-family: inherit;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    color: var(--letter-color-st);
-    margin-bottom: 0.7rem;
+.section-right__msj {
+  font-weight: 700;
+  text-align: center;
+  color: var(--letter-color-st);
 }
 
-.caja-txt_right{
-    width: 80%;
-    height: auto;
-    font-size: 1.5rem;
-    color: var(--letter-color);
+.section-right__textarea {
+  width: 90%;
+  min-height: 5rem;
+  background-color: transparent;
+  font-size: inherit;
+  color: var(--letter-color);
+  border: none;
+  outline: none;
 }
 
-.caja-txt_right::placeholder{
-    font-size: 1rem;
-    color: var(--letter-color);
-    text-align: center;
-}
-
-.btn-copiar{
-    position: relative;
-    bottom: -10%;
-    width: 75%;
-    background-color: var(--sec-color);
-    color:var(--pri-color);
-    border: 1.5px solid var(--pri-color);
-}
-
-.agrandar{
-    position: relative;
-    height: 50%;
-    top: -10%;
-}
-
-.oculto{
-    display: none;
+.section-right__textarea::placeholder {
+  color: var(--letter-color);
+  font-family: var(--font);
+  font-size: 1.1rem;
+  text-align: center;
 }
 
 /*  FOOTER  */
-.footer{
-    grid-area: footer;
-    position: relative;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    color: var(--sec-color);
+.footer {
+  position: relative;
+  height: 5rem;
+  margin-top: 3rem;
+  background-color: var(--pri-color);
+  font-size: 1rem;
+  color: var(--sec-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.footer>a{
-    color: var(--sec-color);
+.social a {
+  margin: 0 0.5rem;
+  font-size: 1.8rem;
+  color: var(--sec-color);
 }
 
-.wave{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+.footer__wave {
+  position: absolute;
+  top: -89%;
+  left: 0;
+  z-index: -1;
+}
+
+/*--------MODIFIERS---------*/
+.hidden {
+  display: none;
+}
+
+.grow {
+  min-height: 20rem;
+  padding: 1rem;
+  text-align: center;
 }

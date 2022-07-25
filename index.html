@@ -1,58 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador de Texto</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/eb9fc79dc8.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/eb9fc79dc8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body class="contenedor">
-    <header class="header">
-        <a href="https://www.aluracursos.com/" target="_blank"><img class="logo" src="img/Logo.png" alt="Logo"></a>
+  <body>
+    <header>
+      <a
+        href="https://www.aluracursos.com/"
+        target="_blank"
+        rel="noreferer noopener"
+        ><img class="logo" src="img/Logo.png" alt="Logo"
+      /></a>
     </header>
     <main class="main">
-        <section class="seccion-left">
-            <textarea class="caja-txt_left" placeholder="Ingrese aquí su texto"></textarea>
-            <div class="btn-contenedor">
-                <div class="advertencia">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <h6>Solo letras minúsculas y sin acentos</h6>
-                </div>
-                <button class="btn-encriptar boton">Encriptar</button>
-                <button class="btn-desencriptar boton">Desencriptar</button>
-            </div>
-        </section>
-        <section class="seccion-right">
-            <div class="sec2-container">
-                <img class="aside-img" src="img/Muñeco.png">
-                <p class="aside-msj">Ningún mensaje fue encontrado</p>
-                <textarea class="caja-txt_right" placeholder="Ingresa el texto que desees encriptar o desencriptar"
-                    readonly></textarea>
-                <button class=" btn-copiar boton oculto">Copiar</button>
-            </div>
-        </section>
+      <section class="section-left">
+        <textarea
+          class="section-left__textarea"
+          placeholder="Ingrese aquí su texto"
+        ></textarea>
+        <div class="warnning">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <h6>Solo letras minúsculas y sin acentos</h6>
+        </div>
+        <div class="btn-container">
+          <button id="btn-encrypt" class="btn">Encriptar</button>
+          <button id="btn-decrypt" class="btn btn-secondary">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+
+      <section class="section-right">
+        <div class="section-right__container">
+          <img class="section-right__img" src="img/Muñeco.png" />
+          <p class="section-right__msj">Ningún mensaje fue encontrado</p>
+          <textarea
+            class="section-right__textarea"
+            placeholder="Ingresa el texto que desees encriptar o desencriptar"
+            readonly
+          ></textarea>
+          <button id="btn-copy" class="btn btn-secondary hidden">Copiar</button>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <p class="copyright">RoninWebDesign || Abel Alejandro Acuña</p>
-        <a href="https://github.com/Ronin-21" target="_blank"><i class="fa-brands fa-2x fa-github"></i></a>
-        <a href="https://www.facebook.com/abel.acuna.9/" target="_blank"><i class="fa-brands fa-2x fa-facebook"></i></a>
-        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#0A3871" fill-opacity="1"
-                d="M0,224L48,202.7C96,181,192,139,288,128C384,117,480,139,576,160C672,181,768,203,864,224C960,245,1056,267,1152,272C1248,277,1344,267,1392,261.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-        </svg>
+      <svg
+        class="footer__wave"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#0A3871"
+          fill-opacity="1"
+          d="M0,224L48,202.7C96,181,192,139,288,128C384,117,480,139,576,160C672,181,768,203,864,224C960,245,1056,267,1152,272C1248,277,1344,267,1392,261.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+      <p class="copyright">RoninWebDesign || Abel Alejandro Acuña</p>
+      <div class="social">
+        <a href="https://github.com/Ronin-21" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://www.facebook.com/abel.acuna.9/" target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
